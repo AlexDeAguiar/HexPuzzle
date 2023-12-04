@@ -22,9 +22,9 @@ A matrix of of 7 rows and 6 columns of numbers called "Tiles". The row represent
 
 Example of the input:
 ```
-Border = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
-Tiles =  [|0,0,0,0,0,0,
-          |0,0,0,0,0,0,
+Border = [-1,0,0,2,0,3,0,0,0,0,0,0,0,0,0,0,0,0];
+Tiles =  [|1,0,0,0,0,0,
+          |-3,0,-2,0,0,0,
           |0,0,0,0,0,0,
           |0,0,0,0,0,0,
           |0,0,0,0,0,0,
