@@ -20,6 +20,12 @@ array[1..7] of var bool: Flips;
 constraint alldifferent(TileAssignments);
 
 %Match connections with border
-constraint forall(i in 0..17) (Border[i + 1] + Tiles[TileAssignments[(i div 3) + 1] + 1, ( (((if Flips[(i div 3) + 1] then -1 else 1 endif) * ((i mod 3) + (i div 3) + Rotations[(i div 3) + 1])) + (if Flips[(i div 3) + 1] then 6 else 0 endif)) mod 6) + 1] <= 0);
+constraint forall(i in 0..17) (Border[i + 1] + Tiles[TileAssignments[(i div 3) + 1] + 1, (((((((((i div 3) + (i mod 3)) mod 6) * (if Flips[(i div 3) + 1] then -1 else 1 endif)) + 6) mod 6) + Rotations[(i div 3) + 1]) mod 6) + 1)] <= 0);
+
+
+%Match connections with center
+%constraint forall(i in 0..5) (Tiles[TileAssignments[6+1]+1, ((Rotations[6+1] + i + 1) mod 6) + 1] = 0);
+
+%Match connections with sides (TODO)
 
 solve satisfy;
