@@ -26,7 +26,7 @@ constraint forall(i in 0..17) (Border[i + 1] + Tiles[TileAssignments[(i div 3) +
 constraint forall(i in 0..5) ((Tiles[TileAssignments[i + 1] + 1, ((((((((i + 4) mod 6) * (if Flips[i + 1] then -1 else 1 endif)) + 6) mod 6) + Rotations[i + 1]) mod 6) + 1)]) + (Tiles[TileAssignments[6 + 1] + 1, ((((((((i + 1) mod 6) * (if Flips[6 + 1] then -1 else 1 endif)) + 6) mod 6) + Rotations[6 + 1]) mod 6) + 1)]) <= 0);
 
 
-%Match connections with sides (TODO)
+%Match connections with sides
 constraint forall(i in 0..5) ((Tiles[TileAssignments[i + 1] + 1, ((((((((i + 5) mod 6) * (if Flips[i + 1] then -1 else 1 endif)) + 6) mod 6) + Rotations[i + 1]) mod 6) + 1)])
 + (Tiles[TileAssignments[((i + 5) mod 6) + 1] + 1, ((((((((i + 2) mod 6) * (if Flips[((i + 5) mod 6) + 1] then -1 else 1 endif)) + 6) mod 6) + Rotations[((i + 5) mod 6) + 1]) mod 6) + 1)]) <= 0);
 
