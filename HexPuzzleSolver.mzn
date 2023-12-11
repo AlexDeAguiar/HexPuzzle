@@ -27,6 +27,9 @@ constraint forall(i in 0..5) ((Tiles[TileAssignments[i + 1] + 1, ((((((((i + 4) 
 
 
 %Match connections with sides (TODO)
+constraint forall(i in 0..5) ((Tiles[TileAssignments[i + 1] + 1, ((((((((i + 5) mod 6) * (if Flips[i + 1] then -1 else 1 endif)) + 6) mod 6) + Rotations[i + 1]) mod 6) + 1)])
++ (Tiles[TileAssignments[((i + 5) mod 6) + 1] + 1, ((((((((i + 2) mod 6) * (if Flips[((i + 5) mod 6) + 1] then -1 else 1 endif)) + 6) mod 6) + Rotations[((i + 5) mod 6) + 1]) mod 6) + 1)]) <= 0);
+
 
 solve satisfy;
 
