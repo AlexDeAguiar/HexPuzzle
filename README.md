@@ -5,7 +5,7 @@ You can use this link https://www.minizinc.org/software.html
 
 ## Step 2: Open MiniZinc IDE + project files
 Start the MiniZinc IDE
-On the top right, select "open" and select both `HexPuzzleSolver.mnz` (source file) and `HexPuzzleExample.dzn` (input file)
+On the top right, select "open" and select both `HexPuzzleSolver.mzn` (source file) and `HexPuzzleExample.dzn` (input file)
 
 ## Step 3: Run it
 On the top, select "Run", the output will appear on the bottom once it finds a solution.
