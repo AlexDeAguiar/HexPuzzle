@@ -30,7 +30,7 @@ array[0..6] of var bool: Flips;
 
 %Input Representation B (Comment this whole block to use a different one)------------------------------
 array[1..30] of -MaxLength..MaxLength: s =
-  [1, 1, -1, 0, 1, -1, 1, 1, -1, -1, 0, 1, 0, -1, 1, -1, 0, 1, 0, 1, -1, 1, -1, -1, -1, -1, 0, -1, 0, 0];
+  [-1, -1, 1, 0, -1, 1, -1, -1, 1, 1, 0, -1, 0, 1, -1, 1, 0, -1, 0, 1, -1, 1, -1, -1, -1, -1, 0, 1, 0, 0];
 
 array[1..7, 1..6] of -MaxLength..MaxLength: sMap = 
   [|-s[1],  -s[2],  -s[3],   s[20],  s[25],  s[19],
